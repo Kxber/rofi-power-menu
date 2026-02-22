@@ -2,7 +2,7 @@
 
 
 Rofi Power Menu provides a mode for offering basic power menu operations such as
-shutting down, logging out, rebooting and suspending. By default, it shows all
+shutting down, logging out, rebooting, suspending and hibernating. By default, it shows all
 choices and asks for confirmation for irreversible actions. The choices, their
 order and whether they require confirmation, can be all configured with
 command-line options. It also shows symbols by default, but this requires a
@@ -80,11 +80,11 @@ Available options:
   --dry-run            Don't perform the selected action but print it to stderr.
   --choices CHOICES    Show only the selected choices in the given order. Use /
                        as the separator. Available choices are lockscreen,
-                       logout,suspend, hibernate, reboot and shutdown. By
+                       logout, suspend, hibernate, suspend-then-hibernate, reboot and shutdown. By
                        default, all available choices are shown.
   --confirm CHOICES    Require confirmation for the gives choices only. Use / as
                        the separator. Available choices are lockscreen, logout,
-                       suspend, hibernate, reboot and shutdown. By default, only
+                       suspend, hibernate, suspend-then-hibernate, reboot and shutdown. By default, only
                        irreversible actions logout, reboot and shutdown require
                        confirmation.
   --choose CHOICE      Preselect the given choice and only ask for a
@@ -92,8 +92,8 @@ Available options:
                        is strongly recommended to combine this option with
                        --confirm=CHOICE if the choice wouldn't require
                        confirmation by default. Available choices are
-                       lockscreen, logout, suspend, hibernate, reboot and
-                       shutdown.
+                       lockscreen, logout, suspend, hibernate, suspend-then-hibernate,
+                       reboot and shutdown.
   --[no-]symbols       Show Unicode symbols or not. Requires a font with support
                        for the symbols. Use, for instance, fonts from the
                        Nerdfonts collection. By default, they are shown
@@ -115,6 +115,7 @@ desired choices with `/` as the separator. Available choices are:
 - `logout`: Log out (confirmation asked by default)
 - `suspend`: Suspend
 - `hibernate`: Hibernate
+- `suspend-then-hibernate`: Suspend and then Hibernate
 - `reboot`: Reboot (confirmation asked by default)
 - `shutdown`: Shutdown (confirmation asked by default)
 
